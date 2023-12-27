@@ -1,0 +1,13 @@
+from PIL import Image
+
+image_path = 'example.jpg'
+image = Image.open(image_path)
+
+image.show()
+
+width, height = image.size
+print(f"Image width: {width}, height: {height}")
+
+gray_image = image.convert('L')
+gray_image.show()
+gray_image.save('grayscale_example.jpg')
